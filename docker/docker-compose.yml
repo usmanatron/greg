@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  greg:
+    container_name: greg
+    build:
+      context: .
+    volumes:
+      - ./config:/root/.config/greg
+      - ./data:/root/.local/share/greg/data
+      - ./podcasts:/root/Podcasts
+    stdin_open: true
+    tty: true
